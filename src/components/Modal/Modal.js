@@ -4,6 +4,8 @@ import TextField from '@mui/material/TextField';
 import CancelIcon from '@mui/icons-material/Cancel';
 import SearchIcon from '@mui/icons-material/Search';
 import "./Modal.css";
+import axios from 'axios';
+
 <Box
     component="form"
     sx={{
@@ -13,12 +15,23 @@ import "./Modal.css";
     autoComplete="off"
 ></Box>
 
-function Modal({ closeModal }) {
+function Modal(props, { closeModal }) {
+    
+    const getData = () => {
+        let link = document.getElementById("outlined-basic").value
+        console.log(props.link)
+        let platform = props.link
+        let data = {link_data : link}
+        axios.post("http://127.0.0.1:5000/"+platform, data).then((req, res) => {
+            console.log(res)
+        }).catch((err)=>{console.log(err)}) 
+    }
     return (
+
         <div className='ModalBg'>
             <div className='ModalContainer'>
                 <div className='titleCloseBtn'>
-                    <button onClick={() => closeModal(false)}><CancelIcon /></button>
+                    <button onClick={() => props.closeModal(false)}><CancelIcon /></button>
                 </div>
 
                 <div className='inputLabel'>
@@ -28,7 +41,7 @@ function Modal({ closeModal }) {
 
                 <div className='inputBoxModal'>
                     <TextField id="outlined-basic" placeholder="eg. facebook/wasabi.com" variant="outlined" />
-                    <button><SearchIcon /></button>
+                    <button onClick={() => getData()}><SearchIcon /></button>
                 </div>
             </div>
         </div>

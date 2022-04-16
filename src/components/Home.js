@@ -13,17 +13,19 @@ import facebook from "./static/images/cards/facebook.png";
 export default function Home(){ 
 
 const [openModal,setOpenModal]=useState(false);
-
+const [modalLink, setLink] = useState("");
 
 
     return (
       <div>
-      {openModal && <Modal closeModal={setOpenModal}/>}
+      {openModal && <Modal link = {modalLink} closeModal={setOpenModal}/>}
      
         <div className='card'>
   
-        <div onClick={() =>{setOpenModal(true)}}>
+        <div onClick={() =>{setLink("instagram"); setOpenModal(true) }}>
                {/*Instagram*/}
+
+          {console.log(modalLink)}
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
             <CardMedia
@@ -44,7 +46,7 @@ const [openModal,setOpenModal]=useState(false);
           </Card>
          </div>
          
-        <div onClick={() =>{setOpenModal(true)}}>
+        <div onClick={() =>{setLink("facebook"); setOpenModal(true)}}>
           {/* Facebook */}
           <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
@@ -65,7 +67,7 @@ const [openModal,setOpenModal]=useState(false);
           </Card>
           </div>
 
-          <div onClick={() =>{setOpenModal(true)}}>
+          <div onClick={() =>{setLink("youtube");setOpenModal(true)}}>
            {/* Youtube*/}
            <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
@@ -86,7 +88,7 @@ const [openModal,setOpenModal]=useState(false);
           </Card>
 </div>
 
-<div onClick={() =>{setOpenModal(true)}}>
+<div onClick={() =>{setLink("twitter"); setOpenModal(true)}}>
            {/* Twitter */}
            <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
