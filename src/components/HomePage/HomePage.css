@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+.mcontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.mainsc {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    z-index: 1;
+    display: flex;
+}
+
+.wet {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.mainsc-text {
+    font-family: 'Patua One', cursive;
+    font-size: 168px;
+    letter-spacing: 6px;
+    color: aliceblue;
+    margin-left: 20px;
+}
+
+.mainsc-sub {
+    font-family: 'Patua One', cursive;
+    font-size: 40px;
+    letter-spacing: 6px;
+    color: aliceblue;
+    margin-left: -40px;
+    margin-top: 0px;
+}

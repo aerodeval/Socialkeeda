@@ -12,6 +12,10 @@ import {
   Routes
 } from 'react-router-dom'
 import Home from './components/Home.js'
+import Sentiment from './components/Sentiment/Sentiment.js';
+import HomePage  from './components/HomePage/HomePage.js';
+import Graph from './components/Graph/Graph.js';
+
 
 
 export default function ActionArea(){ 
@@ -20,7 +24,9 @@ export default function ActionArea(){
     <Router>
 <Routes>
 <Route exact path="/" element={<Home/>}/>
-
+<Route exact path="/Sentiment" element={<Sentiment/>}/>
+<Route exact path="/Home" element={<HomePage/>}/>
+<Route exact path="/Graph" element={<Graph/>}/>
 
 
 
