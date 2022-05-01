@@ -15,7 +15,7 @@ import Home from './components/Home.js'
 import Sentiment from './components/Sentiment/Sentiment.js';
 import HomePage  from './components/HomePage/HomePage.js';
 import Graph from './components/Graph/Graph.js';
-
+import Donut from './components/Donut/Donut.js';
 
 
 export default function ActionArea(){ 
@@ -27,7 +27,7 @@ export default function ActionArea(){
 <Route exact path="/Sentiment" element={<Sentiment/>}/>
 <Route exact path="/Home" element={<HomePage/>}/>
 <Route exact path="/Graph" element={<Graph/>}/>
-
+<Route exact path="/Donut" element={<Donut/>}/>
 
 
 

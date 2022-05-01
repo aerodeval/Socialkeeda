@@ -18,7 +18,7 @@ export default class Sentiment extends Component {
   width={600}
   height={300}
   
-  value={0.4}
+  value={0.7}
   maxValue={1.0}
   minValue={-1.0}
   maxSegmentLabels={5}
