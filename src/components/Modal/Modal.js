@@ -4,7 +4,8 @@ import TextField from '@mui/material/TextField';
 import CancelIcon from '@mui/icons-material/Cancel';
 import SearchIcon from '@mui/icons-material/Search';
 import "./Modal.css";
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 <Box
     component="form"
@@ -16,15 +17,44 @@ import axios from 'axios';
 ></Box>
 
 function Modal(props, { closeModal }) {
-    
+
+    let navigate = useNavigate ();
+
     const getData = () => {
         let link = document.getElementById("outlined-basic").value
-        console.log(props.link)
-        let platform = props.link
-        let data = {link_data : link}
-        axios.post("http://127.0.0.1:5000/"+platform, data).then((req, res) => {
-            console.log(res)
-        }).catch((err)=>{console.log(err)}) 
+        console.log(props.link);
+        let platform = props.link;
+        let data = {link_data : link};
+        // axios.post("http://127.0.0.1:5000/"+platform, data).then((req, response) => {
+        //     console.log(response)
+          
+        // }).catch((err)=>{console.log(err)}) 
+
+        (async () => {
+            const rawResponse = await fetch("http://127.0.0.1:5000/"+platform, {
+              method: 'POST',
+              headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+              },
+              mode: 'cors',
+              body: JSON.stringify(data)
+            });
+            const content = await rawResponse.json();
+            navigate('/Dashboard', {state:content});
+            console.log(content);
+          })();
+
+        // fetch("http://127.0.0.1:5000/"+platform,  {
+        //     method: "GET",
+        //     headers:{'content-type': 'application/json'},
+        //     mode: 'cors'
+        //   }).then((req, response) => {
+             
+        //     console.log(response)
+          
+        // }).catch((err)=>{console.log(err)})
+        
     }
     return (
 

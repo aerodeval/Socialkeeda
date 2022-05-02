@@ -16,6 +16,8 @@ import Sentiment from './components/Sentiment/Sentiment.js';
 import HomePage  from './components/HomePage/HomePage.js';
 import Graph from './components/Graph/Graph.js';
 import Donut from './components/Donut/Donut.js';
+import Dashboard from './components/Dashboard/Dashboard';
+
 
 
 export default function ActionArea(){ 
@@ -28,6 +30,7 @@ export default function ActionArea(){
 <Route exact path="/Home" element={<HomePage/>}/>
 <Route exact path="/Graph" element={<Graph/>}/>
 <Route exact path="/Donut" element={<Donut/>}/>
+<Route exact path="/Dashboard" element={<Dashboard/>}/>
 
 
 

@@ -10,36 +10,41 @@ import { height } from '@mui/system';
 
 
 
-ChartJS.register(ArcElement, Tooltip, Legend);
 
-export const data = {
+  
+
+function Donut(props) {
+  
+
+  ChartJS.register(ArcElement, Tooltip, Legend);
+
+ let data = {
   labels: ['Negative', 'Positive', 'Neutral'],
   datasets: [
     {
       label: '# of Votes',
-      data: [12, 19, 3],
+      data: [props.pts.neg, props.pts.pos, props.pts.neu],
       backgroundColor: [
-        'rgba(255, 99, 132, 0.2)',
-        'rgba(54, 162, 235, 0.2)',
-        'rgba(255, 206, 86, 0.2)'
+        'rgba(230, 0, 0, 0.7)',
+        'rgba(0, 204, 0, 0.7)',
+        'rgba(0, 102, 204, 0.7)'
+        
   
       ],
       borderColor: [
-        'rgba(255, 99, 132, 1)',
-        'rgba(54, 162, 235, 1)',
-        'rgba(255, 206, 86, 1)'
+        'rgba(230, 0, 0, 1)',
+        'rgba(0, 204, 0, 1)',
+        'rgba(0, 102, 204, 1)'
+        
       ],
       borderWidth: 1,
     
     },
   ],
 };
-  
-
-export default class Donut extends Component {
-    render() {
+   
       return (
-
+<div>
 
         
    <Card sx={{minWidth:500,maxWidth:50,minHeight:500,maxHeight:600}}>
@@ -61,9 +66,12 @@ export default class Donut extends Component {
   </CardContent>
   
    </Card>
-  
+
+   </div>  
         
       )
-    }
+    
   }
+
+  export default Donut
   
