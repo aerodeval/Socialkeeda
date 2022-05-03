@@ -21,8 +21,9 @@ function Dashboard() {
 
     }, [])
     
-
-    if(data){
+if(data){
+    if(data.platform == 'youtube'){
+        
         console.log(data)
         return (
             <div>
@@ -39,6 +40,24 @@ function Dashboard() {
         )
         
     }
+
+    else if(data.platform == 'twitter')
+    {
+        return (
+            <div>
+            <div>
+                <Donut pts={data.donut}/> 
+           </div>
+           <div>
+                <Sentiment avg={data.avg_comp}/>
+           </div>
+           
+        </div>
+        )
+    }
+}
+
+
     else{
         return (
             <div>

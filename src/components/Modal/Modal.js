@@ -40,7 +40,8 @@ function Modal(props, { closeModal }) {
               mode: 'cors',
               body: JSON.stringify(data)
             });
-            const content = await rawResponse.json();
+            var content = await rawResponse.json();
+            content['platform'] = platform;
             navigate('/Dashboard', {state:content});
             console.log(content);
           })();
