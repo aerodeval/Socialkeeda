@@ -17,13 +17,12 @@ function Donut(props) {
   
 
   ChartJS.register(ArcElement, Tooltip, Legend);
-
  let data = {
   labels: ['Negative', 'Positive', 'Neutral'],
   datasets: [
     {
       label: '# of Votes',
-      data: [props.pts.neg, props.pts.pos, props.pts.neu],
+      data: [props.pts.neg , props.pts.pos, props.pts.neu],
       backgroundColor: [
         'rgba(230, 0, 0, 0.7)',
         'rgba(0, 204, 0, 0.7)',

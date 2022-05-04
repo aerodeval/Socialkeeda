@@ -43,7 +43,7 @@ function Modal(props, { closeModal }) {
             var content = await rawResponse.json();
             content['platform'] = platform;
             navigate('/Dashboard', {state:content});
-            console.log(content);
+           // console.log(content);
           })();
 
         // fetch("http://127.0.0.1:5000/"+platform,  {
