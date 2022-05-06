@@ -1,3 +1,97 @@
-td{
-    border: 1px solid;
+@import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap');
+td {
+    font-family: 'Heebo', sans-serif;
+    background-image: linear-gradient( 180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 81%, #222222 81.1%, #222222 85%, rgba(0, 0, 0, 0) 85.1%, rgba(0, 0, 0, 0));
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 2vh;
+    color: black;
+}
+
+.sendash {}
+
+.mdashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 40fr);
+    column-gap: 40px;
+    row-gap: 20px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cont-dash {
+    background-color: black;
+}
+
+.topnegdash {
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 200;
+    color: black;
+    padding: 5px 5px 5px 5px;
+}
+
+.topnegdash {
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    color: black;
+    padding: 5px 15px 5px 15px;
+    border: 4px solid;
+    border-color: #e2b714;
+}
+
+.topposdash {
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 500;
+    color: black;
+    padding: 5px 15px 5px 15px;
+    border: 4px solid;
+    border-color: #e2b714;
+}
+
+.alldash {
+    background-color: #ffffff;
+    border-radius: 20px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 5px 5px 5px 5px;
+    border-radius: 20px;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin-bottom: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 5vh 5vh 5vh 5vh;
+    border: 4px solid;
+    border-color: #e2b714;
+}
+
+.alldash h1 {
+    color: #000000;
+}
+
+.alldash tr {
+    border: none;
+    font-size: 2em;
+    color: black;
+}
+
+li {
+    border-color: rgb(0, 0, 0);
+    margin-left: 20px;
+    margin-bottom: 20px;
 }

@@ -51,17 +51,21 @@ if(data){
         
        
         return (
-            <div>
-                <h2>
+            <div className='cont-dash'>
+           <div className='title'>
+               <h2 cal>
                     {data.title}
                </h2>
-                <div>
+               </div>
+            <div className='mdashboard'>
+                
+                <div className='dondash'>
                     <Donut pts={data.donut}/> 
                </div>
-               <div>
+               <div className='sendash'>
                     <Sentiment avg={data.avg_comp}/>
                </div>
-               <div id='top neg'>
+               <div className='topnegdash' id='top neg'>
                    
                     <h1> Top ten negative Comments </h1>
                     {top_negc.map(name => (  
@@ -73,7 +77,7 @@ if(data){
                
     
                </div>
-               <div id='top pos'>
+               <div className='topposdash' id='top pos'>
                    
                     <h1> Top ten Postive Comments </h1>
                     {top_posc.map(name => (  
@@ -84,13 +88,14 @@ if(data){
 
     
                </div>
-               <div id='full_data'>
+               <div className='alldash' id='full_data'>
                    
-                   <h1> ALl Comments </h1>
+                   <h1> Comment sentiment analysis on your video  </h1>
+                   
                    <table>
                    <tr>
-                    <td>Comments</td>
-                    <td>emotion</td>
+                    <th align="center">Comments</th>
+                    <th align="center">Emotion          </th>
                     
                   </tr>
                    {full_datac.map((name,i) => (
@@ -105,8 +110,10 @@ if(data){
               </div>
                
             </div>
+
+            </div>
         )
-        
+
     }
 
     else if(data.platform == 'twitter')
@@ -128,7 +135,7 @@ if(data){
         } 
         console.log(data)
                 return (
-            <div>
+            <div className='mdashboard'>
             <div>
                 <Donut pts={data.donut}/> 
            </div>

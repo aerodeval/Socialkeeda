@@ -31,21 +31,19 @@ function Sentiment(props) {
   
  
     return (
-      <div>
- <Card sx={{minWidth:500,maxWidth:750,minHeight:500,maxHeight:600}}>
-<CardContent>
-<h1>sentiment of audience towards your content is</h1>
+      <div className='sentiment'>
+ <Card sx={{borderRadius: "40px",backgroundColor: "white",minWidth:300,maxWidth:750,minHeight:530,maxHeight:700,border:"4px solid #e2b714"}}>
+<CardContent >
+<h1>Sentiment of the audience towards your content is</h1>
 <ReactSpeedometer
-  width={600}
-  height={300}
-  
+  width={400}
+  height={200}
   value={props.avg}
   maxValue={1.0}
   minValue={-1.0}
   maxSegmentLabels={5}
   segments={1000}
 />
-
 <h1>{senti}</h1>
 
 

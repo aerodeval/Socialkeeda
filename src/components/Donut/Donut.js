@@ -5,14 +5,15 @@ import Card from '@mui/material/Card';
 import { CardContent } from '@mui/material';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-import { height } from '@mui/system';
-
+import { fontSize, height } from '@mui/system';
+import { defaults } from 'chart.js';
 
 
 
 
   
-
+defaults.font.family = "'Heebo', sans-serif";
+defaults.font.color="red";
 function Donut(props) {
   
 
@@ -37,7 +38,9 @@ function Donut(props) {
         
       ],
       borderWidth: 1,
-    
+      pointLabels: {
+      }
+      
     },
   ],
 };
@@ -46,14 +49,16 @@ function Donut(props) {
 <div>
 
         
-   <Card sx={{minWidth:500,maxWidth:50,minHeight:500,maxHeight:600}}>
-  <CardContent>
+   <Card sx={{ borderRadius: "40px",minWidth:500,maxWidth:50,minHeight:500,maxHeight:600,border:"4px solid #e2b714"}}>
+  <CardContent style={{backgroundColor: "white"}}>
  <Doughnut data={data}  options={{
       responsive: true,
       maintainAspectRatio: true, plugins: {
         title: {
           display: true,
           text: 'Overall Sentiment of Content ',
+          color:"black",
+       
         },
       },
 

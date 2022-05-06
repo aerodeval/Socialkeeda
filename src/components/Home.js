@@ -5,28 +5,47 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 import Modal from './Modal/Modal.js';
-import { useState } from 'react';
+import { useEffect,useRef, useState } from 'react';
 import instagram from "./static/images/cards/instagram.png";
 import twitter from "./static/images/cards/twitter.png";
 import  youtube from "./static/images/cards/youtube.png";
 import facebook from "./static/images/cards/facebook.png";
+import lottie from 'lottie-web';
+import hbee from "./static/svg/hbee.json";
+
 export default function Home(){ 
 
 const [openModal,setOpenModal]=useState(false);
 const [modalLink, setLink] = useState("");
+const container = useRef(null)
+useEffect(()=>
+{ lottie.loadAnimation({
+  container:container.current,
+  renderer:"svg",
+  loop:true,
+  autoplay:true,
+  animationData:require("./static/svg/hbee.json")
 
+})
+
+},[])
 
     return (
-      <div>
+
+      
+       <div>
+         
+      <div className='containers' ref={container}>
+      </div>
       {openModal && <Modal link = {modalLink} closeModal={setOpenModal}/>}
-     
+
         <div className='card'>
   
         <div onClick={() =>{setLink("instagram"); setOpenModal(true) }}>
                {/*Instagram*/}
 
           {console.log(modalLink)}
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{  maxWidth: 345 }}>
             <CardActionArea>
             <CardMedia
                 component="img"
@@ -109,7 +128,9 @@ const [modalLink, setLink] = useState("");
 </div>
     
           </div>
+         
           </div>
+      
 
         );
     }
