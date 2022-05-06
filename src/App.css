@@ -3,6 +3,7 @@
     justify-content: space-around;
     transform: translate(0, 100%);
     z-index: +1;
+    margin-top: -25em;
 }
 
 @media (max-width:70em) {
@@ -14,9 +15,13 @@
     }
 }
 
+.ModalBg {
+    margin-top: -25em;
+}
+
 .containers {
-    width: 20%;
-    transform: translate3d(77em, 650px, 0px);
+    width: 23%;
+    transform: translate3d(73em, 1em em, 0px);
     content-visibility: visible;
     margin-top: -25px;
 }

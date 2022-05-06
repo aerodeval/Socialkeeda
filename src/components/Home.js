@@ -37,10 +37,11 @@ useEffect(()=>
          
       <div className='containers' ref={container}>
       </div>
-      {openModal && <Modal link = {modalLink} closeModal={setOpenModal}/>}
+      
 
         <div className='card'>
-  
+        {openModal && <Modal link = {modalLink} closeModal={setOpenModal}/>}
+
         <div onClick={() =>{setLink("instagram"); setOpenModal(true) }}>
                {/*Instagram*/}
 
