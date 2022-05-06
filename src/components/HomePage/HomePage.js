@@ -2,6 +2,7 @@ import React from 'react';
 import { Component } from 'react'
 import  bgvid from "../static/videos/bgmainscreen.mp4";
 import bug from "../static/images/bug.png";
+import { useNavigate } from "react-router-dom"
 
 import './HomePage.css';
 import { click } from '@testing-library/user-event/dist/click';
@@ -19,6 +20,8 @@ function getClickPositon(e){
   var translate3dValue="translate3d("+xPosition +"px,"+yPosition + "px,0)";
 theThing.style.transform=translate3dValue;
 }
+
+
 export default class HomePage extends Component {
   render() {
     return (
@@ -42,11 +45,11 @@ export default class HomePage extends Component {
 <div className='mainsc-text'>
  
   <p > SocialKeeda </p> 
-  {/* <div id="contentContainer">
+   <div id="contentContainer">
     <div id="thing">
-   <img  className="bugs" src={bug} width="500" height="250" />
+   <img className="bugs" src={bug} width="500" height="250" />
    </div>
-   </div> */}
+   </div> 
   
         </div>
   

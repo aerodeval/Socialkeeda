@@ -24,7 +24,8 @@ export default function Home() {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("./static/svg/hbee.json")
+      animationData: require("./static/svg/hbee.json"),
+      animationData: require("./static/svg/stars.json")
 
     })
 
@@ -79,7 +80,8 @@ export default function Home() {
         </div>
         
       </div>
-      <div className='containers' ref={container}>
+      <div onClick="translate()" className='containers' ref={container}>
+
 
 
  

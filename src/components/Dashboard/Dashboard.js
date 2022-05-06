@@ -8,7 +8,7 @@ import Sentiment from '../Sentiment/Sentiment.js'
 import './Dashboard.css'
 import Card from '@mui/material/Card';
 import { CardContent } from '@mui/material';
-import Sidebar from '../Sidebar/Sidebar';
+
 import lottie from 'lottie-web';
 import Grid from '@material-ui/core/Grid';
 import { GridViewTwoTone } from '@mui/icons-material';
