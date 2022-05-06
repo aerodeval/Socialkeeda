@@ -3,7 +3,6 @@
     justify-content: space-around;
     transform: translate(0, 100%);
     z-index: +1;
-    margin-top: -25em;
 }
 
 @media (max-width:70em) {
@@ -11,22 +10,29 @@
         display: grid;
         grid-template-columns: repeat(2, 40fr);
         row-gap: 20%;
-        margin-bottom: 20;
+    }
+    .main-app {
+        background-color: coral;
     }
 }
 
-.ModalBg {
-    margin-top: -25em;
-}
+.ModalBg {}
 
 .containers {
     width: 23%;
-    transform: translate3d(73em, 1em em, 0px);
     content-visibility: visible;
-    margin-top: -25px;
+    transform: translate3d(0px, -381px, 0px);
 }
 
 .App-name {
     display: flex;
     justify-content: space-around;
+}
+
+.main-app {
+    background-color: coral;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-bottom: 20em;
 }
