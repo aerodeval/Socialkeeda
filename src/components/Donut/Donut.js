@@ -49,9 +49,9 @@ function Donut(props) {
 <div>
 
         
-   <Card sx={{ borderRadius: "40px",minWidth:500,maxWidth:650,minHeight:500,maxHeight:600,border:"4px solid #FF6F91"}}>
+   <Card sx={{ borderRadius: "40px",minWidth:400,maxWidth:633,minHeight:300,maxHeight:900,border:"4px solid #FF6F91"}}>
   <CardContent style={{background: "linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%)" }}>
- <h1>{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}Overall Sentiment of Data</h1>
+ <h1 className='mainh1'>Overall Sentiment of Data</h1>
  <Doughnut data={data}  options={{
       responsive: true,
       maintainAspectRatio: true, plugins: {

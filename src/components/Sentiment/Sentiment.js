@@ -32,14 +32,14 @@ function Sentiment(props) {
  
     return (
       <div className='sentiment'>
- <Card sx={{px:2,borderRadius: "40px",minWidth:500,maxWidth:650,minHeight:500,maxHeight:600,border:"4px solid #FF6F91",   background: "linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%)" }}>
+ <Card sx={{px:2,borderRadius: "40px",minWidth:500,maxWidth:650,minHeight:500,maxHeight:800,border:"4px solid #FF6F91",   background: "linear-gradient(90deg, hsla(242, 58%, 73%, 1) 0%, hsla(157, 72%, 82%, 1) 100%)" }}>
  <CardContent style={{
  }}>
 <div className='sencon'>
 <h1>Sentiment of the audience towards your content is</h1>
 <ReactSpeedometer
-  width={400}
-  height={200}
+  width={600}
+  height={400}
   value={props.avg}
   maxValue={1.0}
   minValue={-1.0}

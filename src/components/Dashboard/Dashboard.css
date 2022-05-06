@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap');
 :root {
     --yellow: linear-gradient(180deg, #F8D49A -146.42%, #FAD79D -46.42%);
     --orange: #fca61f;
@@ -13,10 +14,23 @@
     --activeItem: #f799a354;
 }
 
+html {}
+
+.homerun::-webkit-scrollbar {
+    background: linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+}
+
+.homerun2::-webkit-scrollbar {
+    background: linear-gradient(90deg, hsla(141, 54%, 86%, 1) 0%, hsla(333, 73%, 85%, 1) 50%, hsla(211, 58%, 79%, 1) 100%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+    border-radius: 100px;
+}
+
 .Apes {
     color: var(--black);
-    background: linear-gradient( 106.37deg, #ffe1bc 29.63%, #ffcfd1 51.55%, #f3c6f1 90.85%);
-    height: 100vh;
+    background: linear-gradient(90deg, hsla(192, 80%, 51%, 1) 0%, hsla(355, 85%, 63%, 1) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -29,9 +43,40 @@
 }
 
 .Cards {
-    display: flex;
-    gap: 10px;
-    padding: 5px 5px 5px 5px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 2fr);
+    grid-column-gap: 6px;
+    grid-row-gap: 7px;
+}
+
+.homerun {
+    overflow: scroll;
+    width: 56vh;
+    overflow-x: hidden;
+    height: 52vh;
+}
+
+.div1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.div2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.div3 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.div4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.div5 {
+    grid-area: 3 / 1 / 4 / 3;
+    overflow: scroll;
+    width: 100%;
+    height: 60%;
 }
 
 .parentContainer {
@@ -56,18 +101,51 @@
 }
 
 .AppGlass {
-    display: grid;
-    height: 97%;
-    width: 97%;
     background: var(--glass);
     border-radius: 2rem;
     gap: 16px;
     grid-template-columns: 11rem auto 20rem;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 2rem 2rem 2rem;
 }
 
-.div3 {
+.homerun {
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.homerun tr {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+}
+
+.homerun2 {
     overflow: scroll;
-    width: 100%;
-    height: 50%;
+    overflow-x: hidden;
+    height: 52vh;
+    width: 190vh;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(197, 100%, 64%, 1) 100%);
+    padding: 0 5px 0 5px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.top10 {
+    font-weight: 900;
+    font-family: 'Raleway', sans-serif;
+    background-color: lightgreen;
+    border-radius: 10%;
+    justify-content: space-around;
+    display: flex;
+    box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+}
+
+.comlist li {
+    font-family: 'Raleway', sans-serif;
+    padding-top: 4%;
+    list-style-type: none;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
