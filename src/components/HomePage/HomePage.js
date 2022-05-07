@@ -22,8 +22,10 @@ theThing.style.transform=translate3dValue;
 }
 
 
-export default class HomePage extends Component {
-  render() {
+
+function HomePage() {
+  
+  let navigate = useNavigate();
     return (
 
 
@@ -47,7 +49,7 @@ export default class HomePage extends Component {
   <p > SocialKeeda </p> 
    <div id="contentContainer">
     <div id="thing">
-   <img className="bugs" src={bug} width="500" height="250" />
+   <img className="bugs" src={bug} width="500" height="250" onClick={()=>{navigate('/Home')}} />
    </div>
    </div> 
   
@@ -68,4 +70,4 @@ export default class HomePage extends Component {
      
     )
   }
-}
+export default HomePage

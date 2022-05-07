@@ -25,9 +25,9 @@ export default function ActionArea(){
 
     <Router>
 <Routes>
-<Route exact path="/" element={<Home/>}/>
+<Route exact path="/" element={<HomePage/>}/>
 <Route exact path="/Sentiment" element={<Sentiment/>}/>
-<Route exact path="/Home" element={<HomePage/>}/>
+<Route exact path="/Home" element={<Home/>}/>
 <Route exact path="/Graph" element={<Graph/>}/>
 <Route exact path="/Donut" element={<Donut/>}/>
 <Route exact path="/Dashboard" element={<Dashboard/>}/>
