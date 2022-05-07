@@ -3,7 +3,9 @@ import { Component } from 'react'
 import  bgvid from "../static/videos/bgmainscreen.mp4";
 import bug from "../static/images/bug.png";
 import { useNavigate } from "react-router-dom"
-
+import { motion } from "framer-motion"
+import lottie from 'lottie-web';
+import { useEffect, useRef, useState } from 'react';
 import './HomePage.css';
 import { click } from '@testing-library/user-event/dist/click';
 window.onload=function(){
@@ -24,9 +26,35 @@ theThing.style.transform=translate3dValue;
 
 
 function HomePage() {
+  const spring = {
+    type: "spring",
+    damping: 10,
+    stiffness: 100
+  }
   
   let navigate = useNavigate();
-    return (
+    
+  const container = useRef(null)
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../static/svg/hbee.json")
+
+    })
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("../static/svg/stars.json")
+ 
+    })
+  }, [])
+
+  return (
 
 
 
@@ -48,9 +76,10 @@ function HomePage() {
  
   <p > SocialKeeda </p> 
    <div id="contentContainer">
-    <div id="thing">
-   <img className="bugs" src={bug} width="500" height="250" onClick={()=>{navigate('/Home')}} />
-   </div>
+    <div id="thing"><img className="bugs" src={bug} width="500" height="250" onClick={()=>{navigate('/Home')}} /></div>
+    <motion.div transition={{ duration:14}} initial={{x:0,y:-850}} animate={{ x: 2000 }} exit={{x:1600}} className='containers' ref={container}/>
+    
+ 
    </div> 
   
         </div>

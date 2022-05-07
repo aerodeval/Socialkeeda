@@ -12,9 +12,14 @@ import youtube from "./static/images/cards/youtube.png";
 import facebook from "./static/images/cards/facebook.png";
 import lottie from 'lottie-web';
 import hbee from "./static/svg/hbee.json";
+import { motion } from "framer-motion"
 
 export default function Home() {
-
+  const spring = {
+    type: "spring",
+    damping: 10,
+    stiffness: 100
+  }
   const [openModal, setOpenModal] = useState(false);
   const [modalLink, setLink] = useState("");
   const container = useRef(null)
@@ -24,10 +29,18 @@ export default function Home() {
       renderer: "svg",
       loop: true,
       autoplay: true,
-      animationData: require("./static/svg/hbee.json"),
-      animationData: require("./static/svg/stars.json")
-
+      animationData: require("./static/svg/hbee.json")
+ 
     })
+    lottie.loadAnimation({
+      container: container.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: true,
+      animationData: require("./static/svg/stars.json")
+ 
+    })
+
 
   }, [])
 
@@ -80,12 +93,11 @@ export default function Home() {
         </div>
         
       </div>
-      <div onClick="translate()" className='containers' ref={container}>
-
-
+      <motion.div transition={{ duration:14}} initial={{x:0,y:-450}} animate={{ x: 780 }} exit={{x:1600}} className='containers' ref={container}/>
+      
 
  
-      </div>
+
     </div>
 
 

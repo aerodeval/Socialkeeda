@@ -42,6 +42,12 @@ video {
     display: flex;
 }
 
+.containers {
+    width: 23%;
+    content-visibility: visible;
+    transform: translate3d(0px, -381px, 0px);
+}
+
 .wet {
     grid-column-start: 1;
     grid-row-start: 1;
@@ -65,5 +71,12 @@ video {
 }
 
 #thing {
-    transform: translate3d(750px, -355px, 0);
+    transform: translate3d(750px, -360px, 0);
 }
+
+.bugs:hover {
+    transform: scale(1.5);
+    transition: transform 0.5s;
+}
+
+.bugs {}
